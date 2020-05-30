@@ -13,6 +13,7 @@
 
 <style lang='scss' global>
   @import '../styles/tools/index.scss';
+
   .header {
 
     & > .container {
@@ -22,4 +23,5 @@
     }
 
   }
+  
 </style>

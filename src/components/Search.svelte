@@ -21,7 +21,9 @@
 </div>
 
 <style lang='scss'>
+
   .search {
+    
     width: 100%;
     border: 1px solid slategray;
     margin-bottom: 20px;
@@ -33,5 +35,7 @@
       padding: 15px;
 
     }
+
   }
+
 </style>

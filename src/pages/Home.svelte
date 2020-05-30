@@ -23,7 +23,7 @@
 
 <section class='home'>
   <Container>
-    <Search on:search={onSearch}/>
+    <Search on:search={onSearch} />
     {#await promise}
       <p>...loading</p>
     {:then countries}
@@ -38,7 +38,7 @@
           />
         {/each}
         {:else}
-          <p>empy seach...</p>
+          <p>empy seach</p>
       {/if}
     {/await}
   </Container>

@@ -3,6 +3,7 @@
 </div>
 
 <style lang='scss'>
+
   .container {
 
     max-width: 1280px;
@@ -10,4 +11,5 @@
     width: 90%;
 
   }
+  
 </style>
