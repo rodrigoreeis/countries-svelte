@@ -28,25 +28,75 @@
       <Search on:search={onSearch} />
       <Filter on:filter={onFilter} />
     </div>
-    {#await promise}
-      <p>...loading</p>
-    {:then countries}
-      {#if has(countries)}
-        {#each countries as countrie}
-          <Card 
-            flag={countrie.flag}
-            name={countrie.name} 
-            population={countrie.population}
-            region={countrie.region}
-            capital={countrie.capital}
-          />
-        {/each}
-        {:else}
-          <p>empy seach</p>
-      {/if}
-    {/await}
+  </Container>
+  <Container>
+    <div class='home__cards'>
+      {#await promise}
+        <p>...loading</p>
+      {:then countries}
+        {#if has(countries)}
+          {#each countries as countrie}
+            <Card 
+              flag={countrie.flag}
+              name={countrie.name} 
+              population={countrie.population}
+              region={countrie.region}
+              capital={countrie.capital}
+            />
+          {/each}
+          {:else}
+            <p>empy seach</p>
+        {/if}
+      {/await}
+    </div>
   </Container>
 </section>
 
-<style lang="scss">
+<style lang="scss" global>
+  @import '../styles/tools/index.scss';
+
+  .home {
+
+    &__wrapper {
+
+      @media(min-width: 1024px) {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+
+    }
+    
+    &__cards {
+
+      margin-top: 20px;
+
+      & > .card-countrie {
+  
+        margin: 0 auto;
+        margin-bottom: 15px;
+
+        @media(min-width: 1024px) {
+          
+          min-height: 315px;
+          margin: 5px 30px;
+
+        }
+  
+      }
+
+      @media(min-width: 1024px) {
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+    }
+
+  }
 </style>
