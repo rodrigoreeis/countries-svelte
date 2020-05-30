@@ -19,6 +19,7 @@
 </div>
 
 <style lang='scss'>
+
   .card-countrie {
 
     max-width: 250px;
@@ -42,4 +43,5 @@
     }
 
   }
+  
 </style>

@@ -1,0 +1,1 @@
+export const has = v => v.length > 0

@@ -1,0 +1,14 @@
+$themes: (
+  light: (
+    backgroundColor: hsl(0, 0%, 52%),
+    backgroundElements: hsl(0, 0%, 98%),
+    shadow:  hsl(0, 0%, 100%),
+    textColor: #000,
+  ),
+  dark: (
+    backgroundColor: hsl(207, 26%, 17%),
+    backgroundElements: hsl(209, 23%, 22%),
+    shadow: hsl(200, 15%, 8%),
+    textColor: #fff,
+  ),
+);
