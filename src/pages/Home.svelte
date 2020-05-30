@@ -4,14 +4,19 @@
   import Search from '../components/Search.svelte'
   import Card from '../components/Card.svelte'
 
+  import { has } from '../utils/helpers'
+
   let promise = api('/all')
 
   function onSearch(event) {
-    const value = event.detail
-    const isSearch = value.length > 0
+    const isSearch = has(event.detail)
     isSearch 
-      ? promise = api(`/name/${value}`)
+      ? promise = api(`/name/${event.detail}`)
       : promise = api('/all')
+  }
+
+  function onFilter(event) {
+
   }
   
 </script>
@@ -22,7 +27,7 @@
     {#await promise}
       <p>...loading</p>
     {:then countries}
-      {#if countries.length > 0}
+      {#if has(countries)}
         {#each countries as countrie}
           <Card 
             flag={countrie.flag}

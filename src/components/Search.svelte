@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte'
+  import debounce from 'lodash.debounce'
   export let search = ''
 
   const dispatch = createEventDispatcher()
@@ -13,7 +14,7 @@
 <div class='search'>
   <input 
     class='search__input' 
-    on:keyup={onSearch}
+    on:keyup={debounce(onSearch)}
     bind:value={search} 
     placeholder='Search for a country'
   />
