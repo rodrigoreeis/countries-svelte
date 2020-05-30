@@ -32,6 +32,12 @@
     border-radius: 5px;
     display: flex;
 
+    @media (min-width: 1024px) {
+
+      max-width: 400px;
+
+    }
+
     @include themify($themes) {
 
       background-color: themed('backgroundElements');
