@@ -28,8 +28,10 @@
 
     &__flag 
       > img {
+
         width: 250px;
-    }
+
+      }
 
     &__content {
 
