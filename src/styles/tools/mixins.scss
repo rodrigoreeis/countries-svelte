@@ -15,3 +15,10 @@
 @function themed($key) {
   @return map-get($theme-map, $key);
 }
+
+
+@mixin box-shadow {
+  @include themify($themes) {
+    box-shadow: 0 -15px 15px themed('shadow');
+  }
+}

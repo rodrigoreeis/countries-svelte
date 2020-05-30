@@ -16,6 +16,29 @@
 
   .header {
 
+    height: 70px;
+    @extend %flex-centered;
+    @include box-shadow;
+    
+    & a {
+
+      font-weight: bold;
+      font-size: 16px
+      
+    }
+
+    &__theme {
+
+      font-weight: 500;
+      cursor: pointer;
+      
+    }
+
+    @include themify($themes) {
+      background-color: themed('backgroundElements');
+      color: themed('textColor')
+    }
+
     & > .container {
 
       @extend %flex-spaced;
