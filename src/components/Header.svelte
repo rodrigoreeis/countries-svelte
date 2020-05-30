@@ -43,6 +43,7 @@
 
       font-weight: 500;
       cursor: pointer;
+      text-transform: capitalize;
       
     }
 
