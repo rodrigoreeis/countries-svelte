@@ -1,7 +1,7 @@
 <script>
-  import http from '../services/http'
-  http('/all')
-    .then(res => console.log(res))
+  import api from '../services/api'
+  
+  let promise = api('/all')
 </script>
 
 <template>
