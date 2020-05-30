@@ -1,13 +1,14 @@
 <script>
   import api from '../services/api'
+  import Container from '../components/Container.svelte'
   import Card from '../components/Card.svelte'
 
   let promise = api('/all')
   
 </script>
 
-<template>
-  <section class='home'>
+<section class='home'>
+  <Container>
     {#await promise}
       <p>...loading</p>
     {:then countries}
@@ -20,14 +21,9 @@
           capital={countrie.capital}
         />
       {/each}
-    {:catch error}
-      <p>{error.message}</p>
     {/await}
-
-
-
-  </section>
-</template>
+  </Container>
+</section>
 
 <style lang="scss">
 </style>
