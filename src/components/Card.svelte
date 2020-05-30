@@ -12,9 +12,15 @@
   </figure>
   <div class='card-countrie__content'>
     <h1 class='card-countrie__name'>{name}</h1>
-    <p class='card-countrie__population'>Population: <span>{population}</span></p>
-    <p class='card-countrie__region'>Region: <span>{region}</span></p>
-    <p class='card-countrie__capital'>Capital: <span>{capital}</span></p>
+    {#if population}
+      <p class='card-countrie__population'>Population: <span>{population}</span></p>
+    {/if}
+    {#if region}
+      <p class='card-countrie__region'>Region: <span>{region}</span></p>
+    {/if}
+    {#if capital}
+      <p class='card-countrie__capital'>Capital: <span>{capital}</span></p>
+    {/if}
   </div>
 </div>
 
