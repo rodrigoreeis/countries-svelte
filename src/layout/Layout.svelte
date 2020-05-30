@@ -8,6 +8,6 @@
 <Router url='{url}'>
   <Header />
   <main class='main'>
-   <Routes />
+    <Routes />
   </main>
 </Router>

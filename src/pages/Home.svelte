@@ -1,12 +1,14 @@
-<style lang="scss">
-  .wrapper {
-    background-color: blue;
-    &__text {
-      color: red
-    }
-  }
-</style>
+<script>
+  import http from '../services/http'
+  http('/all')
+    .then(res => console.log(res))
+</script>
 
-<div class='wrapper'>
-  <p class='wrapper__text'>dwokdwokwo</p>
-</div>
+<template>
+  <div class='wrapper'>
+    <p class='wrapper__text'>dwokdwokwo</p>
+  </div>
+</template>
+
+<style lang="scss">
+</style>
