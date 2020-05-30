@@ -22,15 +22,19 @@
     {#await promise}
       <p>...loading</p>
     {:then countries}
-      {#each countries as countrie}
-        <Card 
-          flag={countrie.flag}
-          name={countrie.name} 
-          population={countrie.population}
-          region={countrie.region}
-          capital={countrie.capital}
-        />
-      {/each}
+      {#if countries.length > 0}
+        {#each countries as countrie}
+          <Card 
+            flag={countrie.flag}
+            name={countrie.name} 
+            population={countrie.population}
+            region={countrie.region}
+            capital={countrie.capital}
+          />
+        {/each}
+        {:else}
+          <p>empy seach...</p>
+      {/if}
     {/await}
   </Container>
 </section>
