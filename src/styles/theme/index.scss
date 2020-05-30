@@ -1,8 +1,8 @@
 $themes: (
   light: (
-    backgroundColor: hsl(0, 0%, 52%),
+    backgroundColor:hsl(0, 0%, 100%),
     backgroundElements: hsl(0, 0%, 98%),
-    shadow:  hsl(0, 0%, 100%),
+    shadow:  hsl(0, 0%, 52%), 
     textColor: #000,
   ),
   dark: (

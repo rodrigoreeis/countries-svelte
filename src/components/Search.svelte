@@ -43,12 +43,12 @@
 
       width: 100%;
       padding: 15px;
-      font-weight: 500;
+      font-weight: 500c;
       font-size: 16px;
       
       &::placeholder {
 
-        font-weight: 500;
+        font-weight: 500c;
         font-size: 14px;
 
       }
