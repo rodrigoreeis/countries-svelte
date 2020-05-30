@@ -19,6 +19,6 @@
 
 @mixin box-shadow {
   @include themify($themes) {
-    box-shadow: 0 -15px 15px themed('shadow');
+    box-shadow: 0px 0px 15px -8px themed('shadow');
   }
 }
