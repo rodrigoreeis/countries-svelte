@@ -1,6 +1,6 @@
 export const fields = [
   'Africa',
-  'America',
+  'Americas',
   'Asia',
   'Europe',
   'Oceania'

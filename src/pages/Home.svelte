@@ -17,7 +17,7 @@
   }
 
   function onFilter(event) {
-    console.log(event.detail)
+    promise = api(`/region/${event.detail}`)
   }
   
 </script>
