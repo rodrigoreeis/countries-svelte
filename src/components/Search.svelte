@@ -1,8 +1,8 @@
 <script>
-  import { createEventDispatcher } from 'svelte';
+  import { createEventDispatcher } from 'svelte'
   export let search = ''
 
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher()
   
   function onSearch() {
     dispatch('search', search)
