@@ -1,11 +1,19 @@
 <script>
+  import { createEventDispatcher } from 'svelte';
   export let search = ''
+
+  const dispatch = createEventDispatcher();
+  
+  function onSearch() {
+    dispatch('search', search)
+  }
 
 </script>
 
 <div class='search'>
   <input 
     class='search__input' 
+    on:keyup={onSearch}
     bind:value={search} 
     placeholder='Search for a country'
   />

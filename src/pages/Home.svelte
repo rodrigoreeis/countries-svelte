@@ -5,12 +5,20 @@
   import Card from '../components/Card.svelte'
 
   let promise = api('/all')
+
+  function onSearch(event) {
+    const value = event.detail
+    const isSearch = value.length > 0
+    isSearch 
+      ? promise = api(`/name/${value}`)
+      : promise = api('/all')
+  }
   
 </script>
 
 <section class='home'>
   <Container>
-    <Search />
+    <Search on:search={onSearch}/>
     {#await promise}
       <p>...loading</p>
     {:then countries}
